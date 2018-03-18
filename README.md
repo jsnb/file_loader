@@ -12,7 +12,7 @@ $ pip install -r requirements.txt
 
 Create required directories and init sqlite db inside this directory
 ```bash
-$ mkdir data logs data/loaded data/failed
+$ mkdir data logs data/loaded data/failed specs
 $ touch clover.db
 ```
 
