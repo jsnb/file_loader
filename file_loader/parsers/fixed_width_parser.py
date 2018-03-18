@@ -5,6 +5,7 @@ import os
 from file_loader.exceptions import MalformedLineError
 from file_loader.logger import logger
 
+
 class FixedWidthParser:
     """Parser class defines how to parse a fixed width file"""
     COLUMN_NAME = 'column name'

@@ -1,4 +1,4 @@
-"""Abstract parser class for dumping data from files to a database
+"""Parser class for dumping data from files to a database
 """
 from file_loader.logger import logger
 
@@ -10,6 +10,8 @@ class Parser:
     def __init__(self, data_file, schema_file, parser_cls: object,
                  backend_cls: object, connection_string: str):
         """
+        the parser_cls and bridge_cls are implemented in the init of the this Parser class
+        the parser should feasibly be agnostic as to how it's parsing and where it's sending the data
 
         :param data_file: single data file path to be parsed/dumped
         :param schema_file: schema file path instructs the parser on how to parse the data file

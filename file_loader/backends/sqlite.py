@@ -27,6 +27,7 @@ class SqlLiteBackend(Backend):
         self.engine = None
         self.metadata = None
         self.table = None
+        super().__init__()
 
     def init_backend(self, table_name: str, fields: list):
         """Initializes the backend by creating a table object and creating
@@ -36,7 +37,7 @@ class SqlLiteBackend(Backend):
         :param fields: list of columns and their data types for the table
         :return:
         """
-        logger.info('Initializing backend for table: %s' % table_name)
+        logger.info('Initializing backend for table: %s', table_name)
         self.engine = create_engine(self.connection_string)
         self.metadata = MetaData(bind=self.engine)
 
