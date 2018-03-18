@@ -1,5 +1,12 @@
+# default the sqlite db to the current directory
+import os
+
+cwd = os.getcwd()
+DB_FILE = 'clover.db'
+SQLITE_URL = os.path.join(cwd,DB_FILE)
+
 DATABASE_CONFIG = {
-    'sqlite': 'sqlite:////Users/jason/Documents/pyprojects/file_loader/clover.db'
+    'sqlite': 'sqlite:////%s' % SQLITE_URL
 }
 
 SPECS_DIR = './specs'
