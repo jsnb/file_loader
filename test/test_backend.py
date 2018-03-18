@@ -5,7 +5,7 @@ from sqlalchemy import MetaData
 from sqlalchemy.sql.sqltypes import INTEGER, TEXT, BOOLEAN
 from sqlalchemy.exc import StatementError
 
-from file_loader.backend import SqlLiteBackend
+from file_loader.backends.sqlite import SqlLiteBackend
 
 
 class BackendTest(TestCase):

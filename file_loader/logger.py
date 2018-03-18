@@ -1,5 +1,9 @@
+"""
+Basic logging module
+"""
 import logging
 from logging.handlers import RotatingFileHandler
+from config import LOG_FILENAME
 
 # create logger
 logger = logging.getLogger('Parser App')
@@ -7,8 +11,6 @@ logger.setLevel(logging.DEBUG)
 
 # create console handler and set level to debug
 #handler = logging.StreamHandler()
-
-LOG_FILENAME = 'logs/file_load.log'
 
 handler = RotatingFileHandler(LOG_FILENAME, maxBytes=200000, backupCount=5)
 
@@ -24,4 +26,4 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 # 'application' code
-logger.info('log initialized %s' % __name__)
+logger.info('log initialized %s', __name__)

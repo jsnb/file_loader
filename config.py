@@ -8,3 +8,5 @@ ARCHIVE_DIR = './data/loaded'
 FAILED_DIR = './data/failed'
 
 FIXED_WIDTH = 'fixed_width'
+
+LOG_FILENAME = 'logs/file_load.log'

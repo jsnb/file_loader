@@ -4,8 +4,7 @@ from unittest import TestCase
 
 from file_loader.parser import Parser
 from file_loader.parsers.fixed_width_parser import FixedWidthParser
-from file_loader.backend import SqlLiteBackend
-from file_loader.exceptions import MalformedLineError
+from file_loader.backends.sqlite import SqlLiteBackend
 
 
 class ParserTest(TestCase):
@@ -23,7 +22,7 @@ count,3,INTEGER'''
             data_file = 'testdata_10-31-2017.txt'
             schema_file = 'testdata.csv'
             mock_connection = 'fakeconnection'
-            with mock.patch('file_loader.backend.SqlLiteBackend.init_backend') as mock_backend:
+            with mock.patch('file_loader.backends.sqlite.SqlLiteBackend.init_backend') as mock_backend:
                 mock_backend.return_value(True)
                 self.parser = Parser(data_file, schema_file, FixedWidthParser, SqlLiteBackend, mock_connection)
 
