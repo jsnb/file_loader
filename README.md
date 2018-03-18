@@ -7,7 +7,7 @@
 
 After establishing a venv - install packages
 ```bash
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Create required directories and init sqlite db inside this directory
