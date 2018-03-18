@@ -10,9 +10,10 @@ After establishing a venv - install packages
 $ pip install requirements.txt
 ```
 
-Create required directories inside this directory
+Create required directories and init sqlite db inside this directory
 ```bash
 $ mkdir data logs data/loaded data/failed
+$ touch clover.db
 ```
 
 
