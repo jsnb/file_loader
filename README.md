@@ -7,7 +7,7 @@
 
 After establishing a venv - install packages
 ```bash
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Create required directories and init sqlite db inside this directory
@@ -25,7 +25,7 @@ $ python run.py test
 
 Run coverage:
 ```bash
-$ coverage run --source file_loader/ run.py
+$ coverage run --source file_loader/ run.py test
 $ coverage report -m
 ```
 
