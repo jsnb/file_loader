@@ -1,9 +1,9 @@
 #ide files
-.idea
+.idea/
 
-logs/.*
-data/.*
-specs/.*
+.logs/.*
+.data/.*
+.specs/.*
 
 
 # Byte-compiled / optimized / DLL files
