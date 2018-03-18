@@ -33,6 +33,9 @@ $ coverage report -m
 ### Usage 
 
 Running the parser:
+Data files to be parsed must go into the ./data directory (according to config.py). 
+In order for the parser to work on a given data file a spec files must exist in the ./specs dir
+
 ```bash
 # run on a single file to a sqlite backend
 $ python run.py load -f testfile_2018-01-01 -b sqlite
