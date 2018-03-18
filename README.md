@@ -25,7 +25,7 @@ $ python run.py test
 
 Run coverage:
 ```bash
-$ coverage run --source file_loader/ run.py
+$ coverage run --source file_loader/ run.py test
 $ coverage report -m
 ```
 
