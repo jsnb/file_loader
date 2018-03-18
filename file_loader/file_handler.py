@@ -73,7 +73,6 @@ class FileHandler:
                 self.backend_cls,
                 self.connection_string)
             load_success = parser.run()
-
             self.move_file(data_file_path, load_success)
 
     def move_file(self, file_path: str, success: bool):
@@ -88,6 +87,7 @@ class FileHandler:
         else:
             target_dir = self.failed_dir
         file_name = os.path.split(file_path)[-1]
+        logger.info('moving file `%s` to `%s`', file_path, os.path.join(target_dir, file_name))
         os.rename(file_path, os.path.join(target_dir, file_name))
 
     @staticmethod
