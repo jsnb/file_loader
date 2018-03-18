@@ -1,0 +1,6 @@
+"column name",width,datatype
+name,10,TEXT
+valid,1,BOOLEAN
+count,3,INTEGER
+memberid,9,TEXT
+claimid,11,TEXT
